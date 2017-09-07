@@ -1,0 +1,14 @@
+{
+  "name": "trifid-plain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "trifid": "github:zazuko/trifid#develop"
+  },
+  "devDependencies": {},
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "trifid --config config.json"
+  }
+}

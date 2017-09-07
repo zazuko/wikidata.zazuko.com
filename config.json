@@ -1,0 +1,47 @@
+{
+  "baseConfig": "trifid:config-sparql.json",
+  "datasetBaseUrl": "http://www.wikidata.org/",
+  "listener": {
+       "port": 8080
+  },
+  "sparqlEndpointUrl": "https://query.wikidata.org/bigdata/namespace/wdq/sparql",
+  "sparqlProxy": {
+    "options": {
+      "queryOperation": "postQueryUrlencoded",
+      "authentication": {
+        "user": "public",
+        "password": "public"
+      }
+    }
+  },
+  "staticViews": {
+    "/": "cwd:views/index.html"
+  },
+  "hydraViews": [{
+    "documentationUrl": "/api",
+    "documentation": "cwd:api/api.json",
+    "options": {
+      "sparqlEndpointUrl": "https://query.wikidata.org/bigdata/namespace/wdq/sparql",
+      "debug": true,
+      "contextHeader": "/context/"
+    }
+  }],
+  "staticFiles": {
+    "dataadminFiles": {
+      "path": "/",
+      "folder": "cwd:public"
+    }
+  },
+  "handler": {
+    "options": {
+      "authentication": {
+        "user": "public",
+        "password": "public"
+      }
+    }
+  },
+  "renderer": {
+    "module": "trifid-renderer-simple",
+    "vocab": "renderer:vocab.json"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "@context": "http://www.w3.org/ns/hydra/context.jsonld",
+  "@graph": [{
+    "@id": "http://wikidata.zazuko.com/api/Api",
+    "@type": "Class",
+    "supportedProperty": [
+      "http://wikidata.zazuko.com/api/view/spaceprobes"
+    ]
+  }, {
+    "@id": "http://wikidata.zazuko.com/api/input/spaceprobes",
+    "@type": "Class",
+    "supportedProperty": [{
+      "property": "http://wikidata.zazuko.com/api/property/FROM"
+    }, {
+      "property": "http://wikidata.zazuko.com/api/property/TO"
+    }]
+  }, {
+    "@id": "http://wikidata.zazuko.com/api/output/spaceprobes",
+    "@type": "Class",
+    "supportedPropertyDISABLED": [{
+      "property": "http://www.w3.org/2000/01/rdf-schema#label"
+    }, {
+      "property": "http://www.wikidata.org/prop/direct/P619"
+    }, {
+      "property": "http://schema.org/image"
+    }]
+  }, {
+    "@id": "http://wikidata.zazuko.com/api/view/spaceprobes/get",
+    "@type": [
+      "Operation",
+      "http://example.org/hv/HydraView"
+    ],
+    "method": "GET",
+    "http://example.org/hv/variables": {
+      "@id": "http://wikidata.zazuko.com/api/iri/spaceprobes"
+    },
+    "http://example.org/hv/code": {
+      "@type": "http://example.org/hv/SparqlQuery",
+      "http://example.org/hv/source": {
+        "@id": "file://spaceprobes.sparql"
+      }
+    },
+    "http://example.org/hv/returnFrameDISABLED": {
+      "@id": "file://spaceprobes.context.json"
+    },
+    "expects": "http://wikidata.zazuko.com/api/input/spaceprobes",
+    "returns": "http://wikidata.zazuko.com/api/output/spaceprobes"
+  }, {
+    "@id": "http://wikidata.zazuko.com/api/view/spaceprobes",
+    "@type": "hydra:TemplatedLink",
+    "supportedOperation": [
+      "http://wikidata.zazuko.com/api/view/spaceprobes/get"
+    ]
+  }, {
+    "@id": "http://wikidata.zazuko.com/api/view/spaceprobes",
+    "@type": "IriTemplate",
+    "template": "/api/spaceprobes/{?from,to}",
+    "variableRepresentation": "BasicRepresentation",
+    "mapping": [{
+      "@type": "IriTemplateMapping",
+      "variable": "from",
+      "property": "http://wikidata.zazuko.com/api/property/FROM"
+    }, {
+      "@type": "IriTemplateMapping",
+      "variable": "to",
+      "property": "http://wikidata.zazuko.com/api/property/TO"
+    }]
+  }]
+}
