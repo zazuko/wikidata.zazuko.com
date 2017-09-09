@@ -40,7 +40,7 @@
         "@id": "file://spaceprobes.sparql"
       }
     },
-    "http://example.org/hv/returnFrameDISABLED": {
+    "http://example.org/hv/returnFrame": {
       "@id": "file://spaceprobes.context.json"
     },
     "expects": "http://wikidata.zazuko.com/api/input/spaceprobes",

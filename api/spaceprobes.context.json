@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "image": {
+      "@id": "http://schema.org/image",
+      "@type": "@id"
+    },
+    "name": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@language": "en"
+    },
+    "launchdate": {
+      "@id": "http://localhost:8080/prop/direct/P619",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@type": "http://localhost:8080/entity/Q26529"
+}
