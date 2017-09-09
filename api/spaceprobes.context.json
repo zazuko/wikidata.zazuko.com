@@ -1,5 +1,7 @@
 {
   "@context": {
+    "Collection": "http://www.w3.org/ns/hydra/core#Collection",
+    "member": "http://www.w3.org/ns/hydra/core#member",
     "space probe": "http://localhost:8080/entity/Q26529",
     "image": {
       "@id": "http://schema.org/image",
@@ -14,5 +16,5 @@
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     }
   },
-  "@type": "space probe"
+  "@type": "Collection"
 }
