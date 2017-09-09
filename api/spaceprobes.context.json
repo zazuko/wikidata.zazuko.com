@@ -1,8 +1,8 @@
 {
   "@context": {
+    "space probe": "http://www.wikidata.org/entity/Q26529",
     "Collection": "http://www.w3.org/ns/hydra/core#Collection",
     "member": "http://www.w3.org/ns/hydra/core#member",
-    "space probe": "http://localhost:8080/entity/Q26529",
     "image": {
       "@id": "http://schema.org/image",
       "@type": "@id"
@@ -11,8 +11,11 @@
       "@id": "http://www.w3.org/2000/01/rdf-schema#label",
       "@language": "en"
     },
+    "label": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+    },
     "launchdate": {
-      "@id": "http://localhost:8080/prop/direct/P619",
+      "@id": "http://www.wikidata.org/prop/direct/P619",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     }
   },

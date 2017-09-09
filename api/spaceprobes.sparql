@@ -3,12 +3,12 @@ PREFIX hydra: <http://www.w3.org/ns/hydra/core#>
 #Timeline of space probes
 CONSTRUCT
 {
-  <http://example.org/> a hydra:Collection .
-  <http://example.org/> hydra:member ?item .
-  ?item a wd:Q26529.
-  ?item rdfs:label ?itemLabel.
-  ?item wdt:P619 ?launchdate.
-  ?item <http://schema.org/image> ?image.
+  <http://wikidata.zazuko.com/api/spaceprobes/Collection> a hydra:Collection .
+  <http://wikidata.zazuko.com/api/spaceprobes/Collection> hydra:member ?item .
+  ?item a wd:Q26529 .
+  ?item rdfs:label ?itemLabel .
+  ?item wdt:P619 ?launchdate .
+  ?item <http://schema.org/image> ?image .
 }
 WHERE
 {
