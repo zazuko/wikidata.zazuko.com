@@ -1,8 +1,6 @@
 {
   "@context": {
     "space probe": "http://www.wikidata.org/entity/Q26529",
-    "Collection": "http://www.w3.org/ns/hydra/core#Collection",
-    "member": "http://www.w3.org/ns/hydra/core#member",
     "image": {
       "@id": "http://schema.org/image",
       "@type": "@id"
@@ -19,5 +17,5 @@
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     }
   },
-  "@type": "Collection"
+  "@type": "space probe"
 }

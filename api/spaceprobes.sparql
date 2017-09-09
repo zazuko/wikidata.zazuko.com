@@ -1,10 +1,6 @@
-PREFIX hydra: <http://www.w3.org/ns/hydra/core#>
-
 #Timeline of space probes
 CONSTRUCT
 {
-  <http://wikidata.zazuko.com/api/spaceprobes/Collection> a hydra:Collection .
-  <http://wikidata.zazuko.com/api/spaceprobes/Collection> hydra:member ?item .
   ?item a wd:Q26529 .
   ?item rdfs:label ?itemLabel .
   ?item wdt:P619 ?launchdate .
