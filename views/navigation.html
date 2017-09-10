@@ -1,6 +1,18 @@
 <nav class="navbar navbar-default">
   <div class="container">
-    <div class="navbar-header"><a class="navbar-brand" href="#">Wikidata Trifid</a>
+
+    <div class="navbar-header"><a class="navbar-brand" href="#">Wikidata Trifid – ${url.hostname}</a>
     </div>
+    ${(typeof i18n == 'undefined')?'':`
+    <div class="nav navbar-nav navbar-right">
+      ${
+        (i18n.options.menuLng || i18n.options.preload || ["en"]).map(
+          function (lng) {
+            let act = (language===lng)?' class="active"':'';
+            return `<li${act}><a href="?${i18n.options.detection.lookupQuerystring}=${lng}">${t("meta:"+lng)}</a></li>`;
+          }
+        ).join("")
+      }
+    </div>`}
   </div>
 </nav>
