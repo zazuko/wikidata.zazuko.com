@@ -1,10 +1,10 @@
 {
-  "name": "trifid-plain",
+  "name": "trifid-wikidata",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "trifid": "github:zazuko/trifid#develop"
+    "trifid": "github:zazuko/trifid#hydra-box"
   },
   "devDependencies": {},
   "license": "UNLICENSED",
