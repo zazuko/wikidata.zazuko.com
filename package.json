@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "trifid": "github:zazuko/trifid#hydra-box"
+    "trifid": "^2.0.0"
   },
   "devDependencies": {},
   "license": "UNLICENSED",
   "scripts": {
     "start": "trifid --config config.json",
-    "start-local": "trifid --config config.local.json"
+    "start-local": "trifid --config config.json"
   }
 }

@@ -1,47 +1,31 @@
 {
   "baseConfig": "trifid:config-sparql.json",
   "datasetBaseUrl": "http://www.wikidata.org/",
-  "listener": {
-       "port": 8080
-  },
-  "sparqlEndpointUrl": "https://query.wikidata.org/bigdata/namespace/wdq/sparql",
+  "sparqlEndpointUrl": "https://query.wikidata.org/sparql",
   "sparqlProxy": {
-    "options": {
-      "queryOperation": "postQueryUrlencoded",
-      "authentication": {
-        "user": "public",
-        "password": "public"
+    "default": {
+      "options": {
+        "queryOperation": "postQueryUrlencoded"
       }
     }
   },
   "staticViews": {
     "/": "cwd:views/home.html"
   },
-  "hydraViews": [{
-    "documentationUrl": "/api",
-    "documentation": "cwd:api/api.json",
-    "options": {
-      "sparqlEndpointUrl": "https://query.wikidata.org/bigdata/namespace/wdq/sparql",
-      "debug": true,
-      "contextHeader": "/context/"
-    }
-  }],
-  "staticFiles": {
-    "dataadminFiles": {
-      "path": "/",
-      "folder": "cwd:public"
-    }
-  },
-  "handler": {
-    "options": {
-      "authentication": {
-        "user": "public",
-        "password": "public"
+  "hydraBox": {
+    "api": {
+      "documentationUrl": "/api",
+      "documentation": "cwd:api/api.jsonld",
+      "options": {
+        "debug": true,
+        "contextHeader": "/context/"
       }
     }
   },
-  "renderer": {
-    "module": "trifid-renderer-simple",
-    "vocab": "renderer:vocab.json"
+  "staticFiles": {
+    "wikidataFiles": {
+      "path": "/",
+      "folder": "cwd:public"
+    }
   }
 }
