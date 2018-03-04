@@ -17,6 +17,7 @@
       "documentationUrl": "/api",
       "documentation": "cwd:api/api.jsonld",
       "options": {
+        "sparqlEndpointUrl": "https://query.wikidata.org/sparql",
         "debug": true,
         "contextHeader": "/context/"
       }
