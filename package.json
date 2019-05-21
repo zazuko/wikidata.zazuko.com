@@ -7,7 +7,7 @@
     "trifid": "^2.1.0"
   },
   "devDependencies": {},
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "start": "trifid --config config.json",
     "start-local": "trifid --config config.json"
