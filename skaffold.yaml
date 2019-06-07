@@ -1,0 +1,33 @@
+apiVersion: skaffold/v1beta11
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+  - image: registry.zazuko.com/docker/wikidata.zazuko.com
+    docker:
+      buildArgs:
+        # Set build args from env
+        # See Dockerfile for details
+        BUILD_DATE: '{{ .BUILD_DATE }}'
+        COMMIT: '{{ .COMMIT }}'
+        VERSION: '{{ .VERSION }}'
+  local:
+    # See https://github.com/GoogleContainerTools/skaffold/issues/2234
+    useDockerCLI: true
+profiles:
+- name: staging
+  deploy:
+    kustomize:
+      path: "k8s/overlays/staging/"
+- name: production
+  build:
+    tagPolicy:
+      envTemplate:
+        template: "{{ .IMAGE_NAME }}:{{ .VERSION }}"
+  deploy:
+    kustomize:
+      path: "k8s/overlays/production/"
+deploy:
+  kustomize:
+    path: "k8s/overlays/development/"

@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: trifid
+spec:
+  rules:
+  - host: wikidata.example.com
+    http:
+      paths:
+      - path: '/'
+        backend:
+          serviceName: trifid
+          servicePort: http
