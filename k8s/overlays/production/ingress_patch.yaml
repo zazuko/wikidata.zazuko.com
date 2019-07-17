@@ -1,4 +1,0 @@
-- op: replace
-  path: /spec/rules/0/host
-  # TODO(sandhose): Move this to wikidata.zazuko.com when the cluster is in production
-  value: wikidata.kube.zazuko.com
