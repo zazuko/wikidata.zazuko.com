@@ -9,7 +9,7 @@ outputs:
 - name: manifest
 
 params:
-  REGISTRY: ((registry))
+  REGISTRY: ((project.registry))
 
 run:
   path: /bin/sh
