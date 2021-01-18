@@ -7,14 +7,14 @@ metadata:
     external-dns.alpha.kubernetes.io/hostname: wikidata-zazuko-com.zazukoians.org
 spec:
   tls:
-  - secretName: wikidata-zazuko-com-cert
-    hosts:
-    - wikidata.zazuko.com
+    - secretName: wikidata-zazuko-com-cert
+      hosts:
+        - wikidata.zazuko.com
   rules:
-  - host: wikidata.zazuko.com
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: trifid
-          servicePort: 80
+    - host: wikidata.zazuko.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: trifid
+              servicePort: 80
